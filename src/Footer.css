@@ -8,29 +8,32 @@
   align-items: flex-end;
   padding-right: 25vw;
   
-  /* [수정] 최소 7px, 비율 연동(0.7vw), 최대 11px로 강제 고정 */
-  font-size: clamp(7px, 0.7vw, 11px); 
+  /* !important를 추가하여 다른 중복 스타일을 무효화하고 강제 적용 */
+  font-size: clamp(10px, 0.75vw, 14px); 
   font-family: 'Courier New', Courier, monospace;
   
-  /* 좁은 행 간격 유지 */
-  line-height: 0.9; 
+  line-height: 1.05; 
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  color: #000000;
+  color: #838282;
+  
+  /* 축소 비율 또한 최우선순위로 고정 */
+  transform: scale(0.9) !important;
+  transform-origin: right center; 
 }
 
 .footer-row-1 {
-  font-weight: bold;
+  font-weight: normal;
   letter-spacing: 0.5px;
-  margin-bottom: 2px; 
+  margin-bottom: 1px; 
 }
 
 .footer-row-2, .footer-row-3 {
   opacity: 1;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .footer-row-4 {
-  margin-top: 2px;
-  color: #000000;
-  font-weight: bold;
+  margin-top: 1px;
+  color: #999999;
+  font-weight: normal;
 }

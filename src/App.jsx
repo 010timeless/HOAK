@@ -5,7 +5,7 @@ import Footer from './Footer';
 import Progress from './Progress';
 
 // assets 폴더의 배경 이미지
-import hoakBackground from './assets/hoak_background_0.png';
+import hoakBackground from './assets/hoak_background_1.png';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
