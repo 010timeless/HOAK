@@ -1,0 +1,36 @@
+.site-footer {
+  height: 16.66vh;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 25vw;
+  
+  /* [수정] 최소 7px, 비율 연동(0.7vw), 최대 11px로 강제 고정 */
+  font-size: clamp(7px, 0.7vw, 11px); 
+  font-family: 'Courier New', Courier, monospace;
+  
+  /* 좁은 행 간격 유지 */
+  line-height: 0.9; 
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.footer-row-1 {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px; 
+}
+
+.footer-row-2, .footer-row-3 {
+  opacity: 1;
+  margin-bottom: 2px;
+}
+
+.footer-row-4 {
+  margin-top: 2px;
+  color: #000000;
+  font-weight: bold;
+}
