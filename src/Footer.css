@@ -3,37 +3,55 @@
   width: 100%;
   background-color: transparent;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  padding-right: 25vw;
-  
-  /* !important를 추가하여 다른 중복 스타일을 무효화하고 강제 적용 */
-  font-size: clamp(10px, 0.75vw, 14px); 
-  font-family: 'Courier New', Courier, monospace;
-  
-  line-height: 1.05; 
+  justify-content: flex-end; /* 우측 정렬 */
+  align-items: center;       /* 세로 중앙 정렬 */
+  padding-right: 5vw;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  color: #838282;
-  
-  /* 축소 비율 또한 최우선순위로 고정 */
+}
+
+/* 텍스트와 이미지를 담는 전체 컨테이너 */
+.footer-container {
+  display: flex;
+  flex-direction: row;       /* 가로로 나란히 배치 */
+  align-items: center;       /* 상하 중앙 정렬 */
+  gap: 15px;                 /* 글자와 이미지 사이의 간격 */
+}
+
+/* 텍스트 그룹: 기존의 우측 정렬 감각 유지 */
+.footer-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: clamp(10px, 0.75vw, 14px) !important; 
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.05; 
+  color: #000000;
   transform: scale(0.9) !important;
   transform-origin: right center; 
 }
 
 .footer-row-1 {
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: 0.5px;
   margin-bottom: 1px; 
 }
 
 .footer-row-2, .footer-row-3 {
-  opacity: 1;
   margin-bottom: 1px;
 }
 
 .footer-row-4 {
   margin-top: 1px;
-  color: #999999;
-  font-weight: normal;
+  font-weight: bold;
+}
+
+/* 이미지 크기 통제 및 반응형 스케일 맞춤 */
+.footer-mango-logo {
+  width: 49px;
+  height: 50px;
+  display: block;
+  object-fit: contain;
+  /* 글자가 소형화될 때 이미지도 정갈하게 비율 축소 연동 */
+  transform: scale(0.9) !important;
+  transform-origin: center;
 }

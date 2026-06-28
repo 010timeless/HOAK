@@ -1,3 +1,4 @@
+/* 기본 초기화 */
 * {
   margin: 0;
   padding: 0;
@@ -12,16 +13,35 @@ html, body {
   overflow-x: hidden;
 }
 
-/* 서서히 나타나는 Fade-in 애니메이션 정의 (1초 동안 동작) */
-.fade-in-bg {
-  animation: fadeInEffect 1s ease-in-out forwards;
+/* 프로그레스바 완료 후 덮는 화면 */
+.cover-screen {
+  position: fixed;        /* 화면 전체 덮기 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a252f; /* 원하는 배경색 */
+  z-index: 999;           /* 맨 위에 표시 */
+  animation: coverDropBounce 1.5s ease forwards;
 }
 
-@keyframes fadeInEffect {
-  from {
+/* 위에서 내려와 덮고, 마지막에 살짝 튕기는 애니메이션 */
+@keyframes coverDropBounce {
+  0% {
+    transform: translateY(-100%); /* 화면 위에서 시작 */
     opacity: 0;
   }
-  to {
+  70% {
+    transform: translateY(0);     /* 빠르게 내려와 덮음 */
     opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px); /* 살짝 위로 튕김 */
+  }
+  95% {
+    transform: translateY(5px);  /* 다시 아래로 */
+  }
+  100% {
+    transform: translateY(0);     /* 최종 위치에 안정적으로 자리 */
   }
 }

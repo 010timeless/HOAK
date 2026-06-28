@@ -5,7 +5,7 @@ import Footer from './Footer';
 import Progress from './Progress';
 
 // assets 폴더의 배경 이미지
-import hoakBackground from './assets/hoak_background_1.png';
+import hoakBackground from './assets/hoak_background_8.png';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,15 +19,15 @@ function App() {
 
   const backgroundStyle = {
     backgroundImage: `url(${hoakBackground})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundSize: '65% auto',
+    backgroundPosition: '10vh 2vh',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     minHeight: '100vh',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#1a252f'
+    backgroundColor: '#ffffff'
   };
 
   if (isLoading) {
@@ -36,7 +36,7 @@ function App() {
 
   // 로딩 완료 후 전체 레이아웃이 화면에 노출될 때 fade-in-bg 클래스가 작동합니다.
   return (
-    <div style={backgroundStyle} className="fade-in-bg">
+    <div style={backgroundStyle} className="cover-screen">
       <Header />
       <MainContent />
       <Footer />

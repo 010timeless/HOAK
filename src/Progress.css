@@ -1,31 +1,20 @@
-.loading-container {
+/* 최상단에 바를 고정하는 트랙 */
+.top-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 100vh;
-  background-color: #1a252f;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-
-.loading-title {
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-}
-
-.progress-track {
-  width: 250px;
-  height: 6px;
-  background-color: #34495e;
-  border-radius: 3px;
+  height: 3px; /* 얇게 지나가는 두께 (의도에 따라 2px~4px 조절 가능) */
+  background-color: rgba(52, 73, 94, 0.2); /* 배경 이미지 방해 없는 반투명 트랙 */
+  z-index: 9999; /* 화면의 그 어떤 요소보다도 무조건 최상위에 노출 */
   overflow: hidden;
 }
 
+/* 왼쪽에서 오른쪽으로 차오르는 게이지 애니메이션 */
 .progress-fill {
   height: 100%;
-  background-color: #3498db;
-  animation: loadingBarAnimation 2s ease-in-out forwards;
+  background-color: #3498db; /* 안산김가 브랜드의 명료한 블루 포인트 */
+  animation: loadingBarAnimation 1.5s ease-in-out forwards;
 }
 
 @keyframes loadingBarAnimation {
