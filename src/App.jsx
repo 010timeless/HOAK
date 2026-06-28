@@ -3,9 +3,8 @@ import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import Progress from './Progress';
-
-// assets 폴더의 배경 이미지
-import hoakBackground from './assets/hoak_background_8.png';
+// 💡 CSS 파일을 확실하게 import 해줍니다.
+import './App.css'; 
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,26 +16,13 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  const backgroundStyle = {
-    backgroundImage: `url(${hoakBackground})`,
-    backgroundSize: '65% auto',
-    backgroundPosition: '10vh 2vh',
-    backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
-    minHeight: '100vh',
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: '#ffffff'
-  };
-
   if (isLoading) {
     return <Progress />;
   }
 
-  // 로딩 완료 후 전체 레이아웃이 화면에 노출될 때 fade-in-bg 클래스가 작동합니다.
+  // 인라인 스타일을 지우고, 고정 클래스 'app-layout-container'를 부여합니다.
   return (
-    <div style={backgroundStyle} className="cover-screen">
+    <div className="app-layout-container cover-screen">
       <Header />
       <MainContent />
       <Footer />

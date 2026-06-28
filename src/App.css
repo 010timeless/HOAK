@@ -1,0 +1,28 @@
+/* [1] 기본 상태 (PC 및 대형 모니터 화면 기준) */
+.app-layout-container {
+  background-image: url('./assets/hoak_background_8.png');
+  background-size: 65% auto;
+  background-position: 10vh 2vh; /* PC에서는 기존의 위쪽 정렬 유지 */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #d8e9ee !important;
+}
+
+/* [2] 모바일 대응 전용 엔진 (화면 너비가 768px 이하일 때만 발동) */
+@media (max-width: 768px) {
+  .app-layout-container {
+    /* 모바일에서는 배경 이미지를 화면 정중앙으로 완벽히 이동 */
+    background-position: center center; 
+    
+    /* 💡 모바일 화면 특성상 이미지가 너무 작아 보인다면, 
+       아래 너비 비율(80%)을 원하는 감각에 맞게 미세 조정하셔도 좋습니다. */
+    background-size: 80% auto; 
+    
+    /* 스크롤 시 배경이 함께 밀리지 않게 모바일 최적화 고정 */
+    background-attachment: scroll; 
+  }
+}
