@@ -1,6 +1,6 @@
 /* [1] 기본 상태 (PC 및 대형 모니터 화면 기준) */
 .app-layout-container {
-  background-image: url('./assets/hoak_background_8.png');
+  background-image: url('./assets/hoak_background_10.png');
   background-size: 65% auto;
   background-position: 10vh 2vh; /* PC에서는 기존의 위쪽 정렬 유지 */
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #d8e9ee !important;
+  background-color: #ffffff !important;
 }
 
 /* [2] 모바일 대응 전용 엔진 (화면 너비가 768px 이하일 때만 발동) */
