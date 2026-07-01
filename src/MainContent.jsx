@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainContent.css';
 // 1. 이미지 파일 import 추가
-import hoakBackground from './assets/hoak_background_9.png'; 
+import hoakBackground from './assets/hoak_background_4.png'; 
 
 function MainContent() {
   return (
@@ -21,9 +21,9 @@ function MainContent() {
         <p className="brand-item">Radiation Shielding</p>
         <p className="brand-item">Architectureal Designer</p>
         <p className="brand-item">Computer Engineering</p>
-        <p className="brand-item">WOOD WORK</p>
+        <p className="brand-item">WOODWORKING</p>
         <p className="brand-item">blog.naver.com/010timeless</p>
-        <p className="brand-item">Reformed Pilates</p>
+        <p className="brand-item">Reformed PILATES</p>
         <p className="brand-item">PUCHIE</p>
       </div>
     </main>
