@@ -1,7 +1,8 @@
 /* [1] 기본 상태 (PC 및 대형 모니터 화면 기준) */
 .app-layout-container {
-  background-image: url('./assets/hoak_background_11.png');
-  background-size: 100% auto;
+  background-image: url('./assets/hoak_background_12.png');
+  background-size: cover;
+  background-position: center;  /* 중앙 정렬 */
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
@@ -15,11 +16,11 @@
 @media (max-width: 768px) {
   .app-layout-container {
     /* 모바일에서는 배경 이미지를 화면 정중앙으로 완벽히 이동 */
-    background-position: center center; 
+    background-position: left top; 
     
     /* 💡 모바일 화면 특성상 이미지가 너무 작아 보인다면, 
        아래 너비 비율(80%)을 원하는 감각에 맞게 미세 조정하셔도 좋습니다. */
-    background-size: 80% auto; 
+    background-size: 100% 100%; 
     
     /* 스크롤 시 배경이 함께 밀리지 않게 모바일 최적화 고정 */
     background-attachment: scroll; 
