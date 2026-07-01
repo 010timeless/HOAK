@@ -45,12 +45,17 @@
   font-weight: bold;
 }
 
-/* 이미지 크기 통제 및 반응형 스케일 맞춤 */
+/* =================================================== */
+/* 수정: 이미지 크기가 화면 비율(너비)에 따라 자동 조절되는 장치 */
+/* =================================================== */
 .footer-mango-logo {
-  width: 49px;
-  height: 50px;
+  /* 고정 크기(px) 대신 화면 너비(vw)에 연동되는 유연한 폭 설정 */
+  width: clamp(35px, 2.5vw, 49px); 
+  height: auto;                     /* 가로가 변할 때 고유 비율 절대 유지 */
+  
   display: block;
   object-fit: contain;
+  
   /* 글자가 소형화될 때 이미지도 정갈하게 비율 축소 연동 */
   transform: scale(0.9) !important;
   transform-origin: center;

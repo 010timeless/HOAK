@@ -1,26 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
-import Progress from './Progress';
-// 💡 CSS 파일을 확실하게 import 해줍니다.
+// 💡 더 이상 사용하지 않는 Progress import는 제거합니다.
 import './App.css'; 
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  // 프로그레스 바 관련 isLoading 상태 및 2초 타이머(useEffect) 로직을 모두 삭제했습니다.
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return <Progress />;
-  }
-
-  // 인라인 스타일을 지우고, 고정 클래스 'app-layout-container'를 부여합니다.
   return (
     <div className="app-layout-container cover-screen">
       <Header />
