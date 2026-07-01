@@ -26,7 +26,7 @@
   padding: 0;
   font-family: 'Courier New', Courier, monospace; /* 정갈한 타이포그래피 감각 */
   font-weight: bold;
-  color: #332222; /* 이미지의 둔탁하고 깊은 갈색 톤과 매칭 */
+  color: #d1c3a9; /* 이미지의 둔탁하고 깊은 갈색 톤과 매칭 */
   
   /* 화면 너비(vw)에 연동하여 폰트 사이즈가 칼같이 자동 변형되는 clamp 장치 */
   font-size: clamp(12px, 0.75vw, 16px);

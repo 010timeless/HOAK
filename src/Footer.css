@@ -25,7 +25,7 @@
   font-size: clamp(10px, 0.75vw, 14px) !important; 
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.05; 
-  color: #000000;
+  color: #998b72;
   transform: scale(0.9) !important;
   transform-origin: right center; 
 }

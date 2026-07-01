@@ -1,8 +1,7 @@
 /* [1] 기본 상태 (PC 및 대형 모니터 화면 기준) */
 .app-layout-container {
-  background-image: url('./assets/hoak_background_10.png');
-  background-size: 65% auto;
-  background-position: 10vh 2vh; /* PC에서는 기존의 위쪽 정렬 유지 */
+  background-image: url('./assets/hoak_background_11.png');
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
